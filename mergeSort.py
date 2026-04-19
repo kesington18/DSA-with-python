@@ -1,9 +1,11 @@
 a = [-5, 3, 2, 1, -3, -3, 7, 2, 2]
 
 def merge_sort(arr):
+    print(f"Splitting: {arr}")  # See the stack grow
+    #  recursive function
     n = len(arr)
 
-    if n == 1:
+    if n == 1:  # base case for the function that checks if the length of the array is 1
         return arr
 
     m = n // 2
@@ -38,6 +40,8 @@ def merge_sort(arr):
         r += 1
         i += 1
 
+    # After the merge, you can also print the result
+    print(f"Merged: {sorted_arr}")  # See the stack shrink
     return sorted_arr
 
 print(merge_sort(a))
